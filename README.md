@@ -34,9 +34,9 @@ Deliverables:
 6. Your top high-level content recommendations based on your analysis
 
 Key stakeholders:
-•	Urška Sršen: Bellabeat’s cofounder and Chief Creative Officer  
-•	Sando Mur: Mathematician and Bellabeat’s cofounder; key member of the Bellabeat executive team
-•	Bellabeat marketing analytics team: A team of data analysts responsible for collecting, analyzing, and reporting data that helps guide Bellabeat’s marketing strategy. 
+- Urška Sršen: Bellabeat’s cofounder and Chief Creative Officer  
+- Sando Mur: Mathematician and Bellabeat’s cofounder; key member of the Bellabeat executive team
+- Bellabeat marketing analytics team: A team of data analysts responsible for collecting, analyzing, and reporting data that helps guide Bellabeat’s marketing strategy. 
 
 
 ## 2. Prepare 
