@@ -45,11 +45,11 @@ The data for processing and analysing will come form Fitbit Fitness Tracker Data
 
 ROCCC framework:
 
--Reliable: The dataset is secondary data collected via survey by Amazon Mechanical Turk. Little information was given about the collection process and hence not very reliable.
--Original: The data is not original, it is sourced from a public dataset
--Comprehensive: Information about the users is also limited, information such as: gender, age, employment status, location, and lifestyle were left out. Not very comprehensive with only 30 samples.
--Current: The data is from 2016 which might be a bit outdated considering smart device user habits.
--Cited: there was no information on this dataset being cited
+- Reliable: The dataset is secondary data collected via survey by Amazon Mechanical Turk. Little information was given about the collection process and hence not very reliable.
+- Original: The data is not original, it is sourced from a public dataset
+- Comprehensive: Information about the users is also limited, information such as: gender, age, employment status, location, and lifestyle were left out. Not very comprehensive with only 30 samples.
+- Current: The data is from 2016 which might be a bit outdated considering smart device user habits.
+- Cited: there was no information on this dataset being cited
 
 Limitations:
 
@@ -57,7 +57,6 @@ Limitations:
 
 
 ## 3. Process
-[Back to Top](#author- Zer En Peng)
 
 
 Installing and loading packages and libraries
@@ -126,7 +125,6 @@ sleep_activity <- merge(sleep, activity,by=c("Id", "date")) head(sleep_activity)
 Cleaning the data to prepare for analysis in 4. Analyze!
 
 ## 4. Analyze
-[Back to Top](#author-Zer En Peng)
 
 -  [Summary](#summary)
 -  [Total Steps](#total-steps)
@@ -182,7 +180,6 @@ str(sleep)
 Next step is sharing which will be done through visualizing the data using ggplot.
 
 ## 5. Share 
-[Back to Top](#author-Zer En Peng)
 
 
 First, comparing the TotalSteps to Calories, we can see from the scatterplot that it is positively correlated.
@@ -231,7 +228,6 @@ From the scatterplot we see that it is negatively correlated. This means that if
 
 
 ## 6. Act
-[Back to Top](#author-Zer En Peng)
 
 Insights and marketing recommendations based on the analysis:
 
