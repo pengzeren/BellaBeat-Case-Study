@@ -243,7 +243,7 @@ Insights and marketing recommendations based on the analysis:
 
 ##End
 
-This is my capstone project with R. Would appreciate any comments and recommendations.
+This is my capstone project of the google analytics programme with R. Would appreciate any comments and recommendations.
 
 Thank you for your attention!
 
