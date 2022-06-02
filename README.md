@@ -45,11 +45,11 @@ The data for processing and analysing will come form Fitbit Fitness Tracker Data
 
 ROCCC framework:
 
--Reliable: The dataset is secondary data collected via survey by Amazon Mechanical Turk. Little information was given about the collection process and hence not very reliable.
--Original: The data is not original, it is sourced from a public dataset
--Comprehensive: Information about the users is also limited, information such as: gender, age, employment status, location, and lifestyle were left out. Not very comprehensive with only 30 samples.
--Current: The data is from 2016 which might be a bit outdated considering smart device user habits.
--Cited: there was no information on this dataset being cited
+- Reliable: The dataset is secondary data collected via survey by Amazon Mechanical Turk. Little information was given about the collection process and hence not very reliable.
+- Original: The data is not original, it is sourced from a public dataset
+- Comprehensive: Information about the users is also limited, information such as: gender, age, employment status, location, and lifestyle were left out. Not very comprehensive with only 30 samples.
+- Current: The data is from 2016 which might be a bit outdated considering smart device user habits.
+- Cited: there was no information on this dataset being cited
 
 Limitations:
 
@@ -57,7 +57,6 @@ Limitations:
 
 
 ## 3. Process
-[Back to Top](#author- Zer En Peng)
 
 
 Installing and loading packages and libraries
@@ -126,7 +125,6 @@ sleep_activity <- merge(sleep, activity,by=c("Id", "date")) head(sleep_activity)
 Cleaning the data to prepare for analysis in 4. Analyze!
 
 ## 4. Analyze
-[Back to Top](#author-Zer En Peng)
 
 -  [Summary](#summary)
 -  [Total Steps](#total-steps)
@@ -182,7 +180,6 @@ str(sleep)
 Next step is sharing which will be done through visualizing the data using ggplot.
 
 ## 5. Share 
-[Back to Top](#author-Zer En Peng)
 
 
 First, comparing the TotalSteps to Calories, we can see from the scatterplot that it is positively correlated.
@@ -190,7 +187,8 @@ First, comparing the TotalSteps to Calories, we can see from the scatterplot tha
 ```
 ggplot(data=activity, aes(x=TotalSteps, y=Calories)) + geom_point() + geom_smooth() + labs(title="Total Steps vs. Calories")
 ```
-![calvssteps2](https://user-images.githubusercontent.com/62857660/136107919-65c86392-4f12-4038-b3d3-09166d8d5381.PNG)
+![Total_steps_vs_Calories](https://user-images.githubusercontent.com/20769378/171519425-8c00f8cf-9652-405a-8e47-1d8df881763b.png)
+
 
 This is fairly obvious as walking more meaning more calories burned, but from a marketing standpoint BellaBeat can use this information to encourage their customers to walk more daily if they are overweight. Which we can see from the weight data, the users average BMI falls in the overweight range of 25.0-29.9.
 
@@ -203,8 +201,8 @@ activity$weekday <- weekdays(activity$date) average_steps <- aggregate(TotalStep
 ggplot(average_steps, aes(x=weekday, y=TotalSteps)) + geom_bar(stat="identity", fill="yellow") + geom_text(aes(label=round(TotalSteps, digits = 0)), color="black", size=5.5) + labs(title = "Total Steps Walked on Average", x="Day", y="Number of Steps") + theme(plot.title = element_text(hjust = 0.5, size=20), axis.text=element_text(size=10), axis.title=element_text(size=14), axis.title.y=element_text(margin = margin(t = 0, r = 15, b = 0, l = 0)), axis.title.x=element_text(margin = margin(t = 15, r = 0, b = 0, l = 0)))
 
 ```
+![Total_steps_walked_on_average](https://user-images.githubusercontent.com/20769378/171519296-de59cce0-58d7-4c48-86f0-a0c049ddfb06.png)
 
-![image]
 
 From this, the bar chart shows that the users are walking slightly less steps daily than recommended. This means that it is likely due to sedentary habits rather than work since it happens also during the weekend.
 
@@ -215,7 +213,7 @@ ggplot(data=sleep, aes(x=TotalMinutesAsleep, y=TotalTimeInBed)) + geom_point()+ 
 
 Next, the total minutes asleep versus total time in bed will be plotted. The relationship between these two information is also showing postive correlation.
 
-![image]
+![Total_minutes_asleep_vs_total_time_in_bed](https://user-images.githubusercontent.com/20769378/171519457-b6ff4bff-823d-4346-9662-93435093ca43.png)
 
 The outliers that is on the upper part of the trendline would show that some people have greater difficulty in falling alseep. They require more time in bed than other users to get the same amount of sleep.
 
@@ -224,13 +222,12 @@ In order to improve sleep time, I decided to conduct an analysis on another slee
 ```
 ggplot(data=sleep_activity, aes(x=TotalMinutesAsleep, y=SedentaryMinutes)) + geom_point(color='red') + geom_smooth() + labs(title="Minutes Asleep vs. Sedentary Minutes")
 ```
-![image]
+![Minutes_asleep_vs_Sedentary_minutes](https://user-images.githubusercontent.com/20769378/171519467-c01df7ab-6145-487e-bfda-7fa30d6ddb64.png)
 
 From the scatterplot we see that it is negatively correlated. This means that if BellaBeat users want to get more sleep time they should decrease their sedentary minutes.
 
 
 ## 6. Act
-[Back to Top](#author-Zer En Peng)
 
 Insights and marketing recommendations based on the analysis:
 
@@ -243,16 +240,6 @@ Insights and marketing recommendations based on the analysis:
 
 ##End
 
-This is my capstone project of the google analytics programme with R. Would appreciate any comments and recommendations.
+This is my capstone project with R. Would appreciate any comments and recommendations.
 
 Thank you for your attention!
-
-
-
-
-
-
-
-
-
-
